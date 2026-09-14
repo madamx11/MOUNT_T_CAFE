@@ -82,7 +82,7 @@ export default function Highlights() {
           {highlights.map((item, idx) => (
             <div
               key={item.src}
-              className="relative w-full aspect-[16/8.5] rounded-[18px] md:rounded-[22px] overflow-hidden shadow-2xl border border-white/[0.08] bg-[#141414]"
+              className="relative w-full aspect-[16/8.5] rounded-[18px] md:rounded-[22px] overflow-hidden shadow-2xl border border-border bg-surface"
             >
               <Image
                 src={item.src}
@@ -104,7 +104,7 @@ export default function Highlights() {
             <div className="relative w-full max-w-[1150px] aspect-[16/8.5] mx-auto">
               {/* ─── Layer 1: Image 1 (Base, z-index: 10) ─── */}
               <motion.div
-                className="absolute inset-0 rounded-[18px] sm:rounded-[20px] md:rounded-[22px] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.35)] border border-white/[0.08] bg-[#141414]"
+                className="absolute inset-0 rounded-[18px] sm:rounded-[20px] md:rounded-[22px] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.35)] border border-border bg-surface"
                 style={{
                   zIndex: 10,
                   scale: scale1,
@@ -126,7 +126,7 @@ export default function Highlights() {
 
               {/* ─── Layer 2: Image 2 (Slides up over Image 1, z-index: 20) ─── */}
               <motion.div
-                className="absolute inset-0 rounded-[18px] sm:rounded-[20px] md:rounded-[22px] overflow-hidden shadow-[0_-8px_30px_rgba(0,0,0,0.5),0_20px_50px_rgba(0,0,0,0.3)] border border-white/[0.08] bg-[#141414]"
+                className="absolute inset-0 rounded-[18px] sm:rounded-[20px] md:rounded-[22px] overflow-hidden shadow-[0_-8px_30px_rgba(0,0,0,0.5),0_20px_50px_rgba(0,0,0,0.3)] border border-border bg-surface"
                 style={{
                   zIndex: 20,
                   y: y2,
@@ -145,7 +145,7 @@ export default function Highlights() {
 
               {/* ─── Layer 3: Image 3 (Slides up over Image 2, z-index: 30) ─── */}
               <motion.div
-                className="absolute inset-0 rounded-[18px] sm:rounded-[20px] md:rounded-[22px] overflow-hidden shadow-[0_-8px_30px_rgba(0,0,0,0.5),0_20px_50px_rgba(0,0,0,0.3)] border border-white/[0.08] bg-[#141414]"
+                className="absolute inset-0 rounded-[18px] sm:rounded-[20px] md:rounded-[22px] overflow-hidden shadow-[0_-8px_30px_rgba(0,0,0,0.5),0_20px_50px_rgba(0,0,0,0.3)] border border-border bg-surface"
                 style={{
                   zIndex: 30,
                   y: y3,

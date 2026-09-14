@@ -18,25 +18,24 @@ export interface SocialLink {
 }
 
 export const socialLinks: SocialLink[] = [
-  { label: 'Instagram', href: 'https://instagram.com/', icon: 'instagram' },
+  { label: 'Instagram', href: 'https://www.instagram.com/mountstea/', icon: 'instagram' },
   { label: 'Facebook', href: 'https://facebook.com/', icon: 'facebook' },
   { label: 'Twitter', href: 'https://x.com/', icon: 'twitter' },
 ];
 
 export const businessInfo = {
-  name: 'Kofi',
-  tagline: 'Specialty Coffee • Est. 2018',
+  name: 'Mounts Tea Cafe',
+  tagline: 'Artisanal Chai & Brews • Est. Paschim Vihar',
   headline: 'A Better Way to Start\nthe Day.',
   subheadline:
-    'Small-batch coffee, thoughtful flavors and a space designed for good mornings and everything in between.',
+    'Handcrafted chai, refreshing beverages, delicious bites and a warm space designed for good conversations.',
   hours: [
-    { days: 'Mon - Fri', time: '07:00 AM - 05:00 PM' },
-    { days: 'Sat - Sun', time: '08:00 AM - 04:00 PM' },
+    { days: 'Mon - Sun', time: '09:00 AM - 08:00 PM' },
   ],
-  phone: '+61 3 9650 1234',
-  address: '288 Flinders Lane\nMelbourne VIC 3000, Australia',
-  mapQuery: '288+Flinders+Lane,+Melbourne+VIC+3000,+Australia',
-  coordinates: { lat: -37.8172, lng: 144.9634 },
+  phone: '088513 74066',
+  address: 'Shop 20, Ground Floor, Block A 4, A4/306,\nCottage Enclave, Paschim Vihar,\nNew Delhi, Delhi 110063',
+  mapQuery: 'Mounts+Tea+Cafe,+Shop+20,+Ground+Floor,+Block+A+4,+Cottage+Enclave,+Paschim+Vihar,+New+Delhi,+Delhi+110063',
+  coordinates: { lat: 28.6696, lng: 77.0960 },
 } as const;
 
 export const footerLinks = [
@@ -44,3 +43,4 @@ export const footerLinks = [
   { label: 'Cookies', href: '#' },
   { label: 'Terms & Conditions', href: '#' },
 ];
+

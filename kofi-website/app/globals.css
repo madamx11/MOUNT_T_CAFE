@@ -1,7 +1,24 @@
 @import 'tailwindcss';
 
 /* ─── Design Tokens ─── */
-:root {
+/* Default Light Theme (Matches actual site screenshot) */
+:root,
+[data-theme='light'] {
+  --background: #ffffff;
+  --foreground: #111111;
+  --muted: #666666;
+  --border: #e8e8e8;
+  --surface: #f7f7f7;
+  --surface-hover: #eeeeee;
+  --accent: #a06b32;
+  --navbar-bg: rgba(255, 255, 255, 0.85);
+  --card-bg: #ffffff;
+  --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+/* Dark Theme */
+[data-theme='dark'],
+.dark {
   --background: #111111;
   --foreground: #f4f4f4;
   --muted: #8a8a8a;
@@ -9,6 +26,9 @@
   --surface: #181818;
   --surface-hover: #1e1e1e;
   --accent: #d4a574;
+  --navbar-bg: rgba(17, 17, 17, 0.85);
+  --card-bg: #141414;
+  --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
 @theme inline {
@@ -32,6 +52,7 @@ body {
   font-family: var(--font-dm-sans), system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 /* Scroll offset for fixed navbar */

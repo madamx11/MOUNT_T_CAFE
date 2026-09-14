@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import { navigationLinks } from '@/data/navigation';
 import { scrollToSection } from '@/lib/utils';
+import ThemeToggle from './ThemeToggle';
 
 interface MenuOverlayProps {
   isOpen: boolean;
@@ -108,7 +109,7 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
         <motion.div
           id="menu-overlay"
           className="fixed inset-0 z-[60] flex"
-          style={{ background: '#111111' }}
+          style={{ background: 'var(--background)' }}
           variants={overlayVariants}
           initial="hidden"
           animate="visible"
@@ -117,14 +118,17 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
           aria-modal="true"
           aria-label="Navigation menu"
         >
-          {/* Close button */}
-          <button
-            onClick={onClose}
-            className="absolute top-5 right-6 md:right-10 lg:right-16 text-foreground text-sm md:text-base font-medium tracking-wide z-10 cursor-pointer transition-opacity hover:opacity-70"
-            aria-label="Close navigation menu"
-          >
-            Close
-          </button>
+          {/* Top Actions: Theme Switcher & Close button */}
+          <div className="absolute top-5 right-6 md:right-10 lg:right-16 flex items-center gap-4 z-10">
+            <ThemeToggle />
+            <button
+              onClick={onClose}
+              className="text-foreground text-sm md:text-base font-medium tracking-wide cursor-pointer transition-opacity hover:opacity-70 px-2 py-1"
+              aria-label="Close navigation menu"
+            >
+              Close
+            </button>
+          </div>
 
           {/* Left — Image */}
           <motion.div

@@ -48,7 +48,7 @@ export default function Hero() {
         <motion.button
           variants={fadeUp}
           onClick={() => scrollToSection('menu')}
-          className="px-7 py-3 rounded-full bg-surface border border-border text-foreground text-sm font-medium tracking-wide cursor-pointer transition-all duration-300 hover:bg-surface-hover hover:border-muted/30"
+          className="px-7 py-3 rounded-full bg-foreground text-background text-sm font-medium tracking-wide cursor-pointer transition-all duration-300 hover:opacity-90 shadow-sm"
           aria-label="Explore menu — scroll to menu section"
         >
           Explore menu

@@ -40,7 +40,7 @@ const socialIconMap: Record<string, React.FC<{ size?: number }>> = {
 };
 
 export default function ContactSection() {
-  const mapSrc = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d${businessInfo.coordinates.lng}!3d${businessInfo.coordinates.lat}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642b4b88b8f2b%3A0x503c94e2fa2c1730!2s288%20Flinders%20Ln%2C%20Melbourne%20VIC%203000%2C%20Australia!5e0!3m2!1sen!2sau!4v1700000000000!5m2!1sen!2sau`;
+  const mapSrc = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3500.85!2d${businessInfo.coordinates.lng}!3d${businessInfo.coordinates.lat}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d039f286b2b2b%3A0x1!2sMounts%20Tea%20Cafe%2C%20Shop%2020%2C%20Ground%20Floor%2C%20Block%20A%204%2C%20Cottage%20Enclave%2C%20Paschim%20Vihar%2C%20New%20Delhi!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin`;
 
   return (
     <section
@@ -62,12 +62,12 @@ export default function ContactSection() {
           >
             {/* Brand */}
             <h2 className="text-2xl md:text-3xl font-medium text-foreground mb-3">
-              Kofi
+              {businessInfo.name}
             </h2>
             <p className="text-2xl sm:text-3xl md:text-4xl font-light tracking-tight text-foreground leading-tight mb-10 md:mb-12">
-              Specialty Roasted, Melbourne
+              Freshly Brewed Chai &amp; Bites,
               <br />
-              Brewed
+              Paschim Vihar
             </p>
 
             {/* Opening Hours */}
@@ -160,7 +160,7 @@ export default function ContactSection() {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Kofi café location — 288 Flinders Lane, Melbourne"
+                title={`${businessInfo.name} location — Paschim Vihar, New Delhi`}
               />
             </div>
           </motion.div>
