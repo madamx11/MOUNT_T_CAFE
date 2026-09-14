@@ -51,12 +51,21 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_IN',
     siteName: 'Mounts Tea Cafe',
+    images: [
+      {
+        url: `${siteUrl}/images/logo.png`,
+        width: 676,
+        height: 676,
+        alt: 'Mounts Tea Cafe Logo',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Mounts Tea Cafe — Paschim Vihar, New Delhi',
     description:
       'Artisanal chai, fresh brews, delicious bites and a cozy welcoming space in Paschim Vihar, New Delhi.',
+    images: [`${siteUrl}/images/logo.png`],
   },
 };
 
@@ -69,6 +78,8 @@ const jsonLd = {
   description:
     'Cozy artisanal tea cafe in Paschim Vihar, New Delhi serving handcrafted chai, sandwiches, momos, shakes, and refreshing beverages.',
   url: siteUrl,
+  logo: `${siteUrl}/images/logo.png`,
+  image: `${siteUrl}/images/logo.png`,
   telephone: '+91-88513-74066',
   priceRange: '₹100 - ₹200',
   servesCuisine: ['Tea', 'Chai', 'Fast Food', 'Snacks', 'Beverages'],

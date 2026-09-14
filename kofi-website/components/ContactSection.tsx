@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { Clock, Phone, MapPin } from 'lucide-react';
 import { businessInfo, socialLinks } from '@/data/navigation';
 import { staggerContainer, slideInLeft, slideInRight } from '@/lib/utils';
@@ -60,10 +61,25 @@ export default function ContactSection() {
             className="lg:pr-12 xl:pr-16 lg:border-r lg:border-border"
             variants={slideInLeft}
           >
-            {/* Brand */}
-            <h2 className="text-2xl md:text-3xl font-medium text-foreground mb-3">
-              {businessInfo.name}
-            </h2>
+            {/* Brand with Logo */}
+            <div className="flex items-center gap-3.5 mb-4">
+              <div className="relative w-12 h-12 md:w-14 md:h-14 rounded-full overflow-hidden border border-border flex-shrink-0 shadow-md">
+                <Image
+                  src={businessInfo.logo}
+                  alt={`${businessInfo.name} logo`}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div>
+                <h2 className="text-2xl md:text-3xl font-medium text-foreground leading-tight">
+                  {businessInfo.name}
+                </h2>
+                <p className="text-xs tracking-widest text-accent uppercase font-medium mt-0.5">
+                  {businessInfo.tagline}
+                </p>
+              </div>
+            </div>
             <p className="text-2xl sm:text-3xl md:text-4xl font-light tracking-tight text-foreground leading-tight mb-10 md:mb-12">
               Freshly Brewed Chai &amp; Bites,
               <br />

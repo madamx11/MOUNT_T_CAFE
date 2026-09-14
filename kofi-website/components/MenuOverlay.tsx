@@ -3,7 +3,7 @@
 import { useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
-import { navigationLinks } from '@/data/navigation';
+import { navigationLinks, businessInfo } from '@/data/navigation';
 import { scrollToSection } from '@/lib/utils';
 import ThemeToggle from './ThemeToggle';
 
@@ -118,6 +118,21 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
           aria-modal="true"
           aria-label="Navigation menu"
         >
+          {/* Top Left — Brand with Logo */}
+          <div className="absolute top-5 left-6 md:left-10 lg:left-16 flex items-center gap-2.5 z-10">
+            <div className="relative w-8 h-8 sm:w-9 sm:h-9 rounded-full overflow-hidden border border-border/40 flex-shrink-0 shadow-sm">
+              <Image
+                src={businessInfo.logo}
+                alt={`${businessInfo.name} logo`}
+                fill
+                className="object-cover"
+              />
+            </div>
+            <span className="text-foreground text-base sm:text-lg font-medium tracking-tight">
+              {businessInfo.name}
+            </span>
+          </div>
+
           {/* Top Actions: Theme Switcher & Close button */}
           <div className="absolute top-5 right-6 md:right-10 lg:right-16 flex items-center gap-4 z-10">
             <ThemeToggle />
@@ -138,7 +153,7 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
             <div className="relative w-full h-[85vh] rounded-2xl overflow-hidden">
               <Image
                 src="/images/heroImg3.jpg"
-                alt="Kofi café interior"
+                alt="Mounts Tea Cafe interior"
                 fill
                 className="object-cover"
                 sizes="45vw"

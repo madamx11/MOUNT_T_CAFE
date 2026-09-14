@@ -1,8 +1,10 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { fadeUp, staggerContainer } from '@/lib/utils';
 import { scrollToSection } from '@/lib/utils';
+import { businessInfo } from '@/data/navigation';
 import HeroGallery from './HeroGallery';
 
 export default function Hero() {
@@ -20,9 +22,18 @@ export default function Hero() {
         {/* Badge */}
         <motion.div
           variants={fadeUp}
-          className="inline-flex items-center px-5 py-2 rounded-full border border-border text-xs md:text-sm text-muted tracking-widest uppercase mb-8 md:mb-10"
+          className="inline-flex items-center gap-2.5 px-4 py-1.5 sm:px-5 sm:py-2 rounded-full border border-border text-xs md:text-sm text-muted tracking-widest uppercase mb-8 md:mb-10 bg-surface/50 shadow-sm"
         >
-          Specialty Coffee &bull; Est. 2018
+          <div className="relative w-5 h-5 rounded-full overflow-hidden flex-shrink-0">
+            <Image
+              src={businessInfo.logo}
+              alt=""
+              width={20}
+              height={20}
+              className="object-cover"
+            />
+          </div>
+          <span>{businessInfo.tagline}</span>
         </motion.div>
 
         {/* Headline */}

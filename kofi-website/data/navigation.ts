@@ -25,10 +25,11 @@ export const socialLinks: SocialLink[] = [
 
 export const businessInfo = {
   name: 'Mounts Tea Cafe',
-  tagline: 'Artisanal Chai & Brews • Est. Paschim Vihar',
+  tagline: 'Good Tea • Higher Moods',
   headline: 'A Better Way to Start\nthe Day.',
   subheadline:
     'Handcrafted chai, refreshing beverages, delicious bites and a warm space designed for good conversations.',
+  logo: '/images/logo.png',
   hours: [
     { days: 'Mon - Sun', time: '09:00 AM - 08:00 PM' },
   ],
